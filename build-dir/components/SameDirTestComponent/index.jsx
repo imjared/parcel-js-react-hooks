@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import _ from 'lodash';
 
 const names = [
@@ -25,7 +24,7 @@ const names = [
   'Spencer Guthrie',
 ];
 
-const HelloWord = () => {
+const TestComponent = () => {
   const getIdx = () => _.random(0, names.length);
   const [name, setName] = useState(names[getIdx()]);
 
@@ -45,7 +44,6 @@ const HelloWord = () => {
       </div>
     </>
   );
-}
-    
-    var mountNode = document.getElementById('app');
-ReactDOM.render(<HelloWord />, mountNode);
+};
+
+export default TestComponent;
